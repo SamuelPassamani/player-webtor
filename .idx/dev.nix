@@ -16,8 +16,8 @@
   idx = {
     # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
     extensions = [
-      "google.gemini-cli-vscode-ide-companion"
-      "dbaeumer.vscode-eslint" # ESLint for code quality
+      "google.gemini-cli-vscode-ide-companion",
+      "dbaeumer.vscode-eslint", # ESLint for code quality
       "esbenp.prettier-vscode" # Prettier for code formatting
     ];
 
@@ -38,13 +38,13 @@
       # Runs when a workspace is first created
       onCreate = {
         # Initialize a new Vite project if no package.json exists
-        init-vite = '''
+        init-vite = ''
           if [ ! -f package.json ]; then
             npm create vite@latest . -- --template react && npm install
           else
             npm install
           fi
-        ''';
+        '';
       };
       # Runs when the workspace is (re)started
       onStart = {};
